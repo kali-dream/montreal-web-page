@@ -1,0 +1,84 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/ccxt/4.1.43/ccxt.browser.min.js);
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    
+    background: url('https://images.squarespace-cdn.com/content/v1/547fe128e4b05ea9bd17363e/1421355220187-N5J4ILMSTEHFG20LO4IZ/Montreal_WinterMoon.jpg?format=2500w');
+    background-size: cover;
+font-family: 'muli',sans-serif ;
+display: flex;
+
+align-items: center;
+align-content: top;
+justify-content: center;
+height: 100vh;
+margin: 0;
+}
+
+
+.bg {
+    /* The image used */
+    background-image: url('https://images.squarespace-cdn.com/content/v1/547fe128e4b05ea9bd17363e/1421355220187-N5J4ILMSTEHFG20LO4IZ/Montreal_WinterMoon.jpg?format=2500w');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+text-decoration: wavy;
+    height: 80vh;
+    border-radius: 50px;
+  color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: 0.7s ease-in;
+    background: linear-gradient(white);
+    justify-content: center;
+    display: flex;
+
+}
+.panel h3{
+    font-size: 24px;
+   
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+
+
+}
+.panel.active{
+    flex: 5;
+
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+@media(max-width: 480px){
+    .container{
+        width: 100vm;
+    }
+    .panel:nth-last-of-type(4),
+    .panel:nth-last-of-type(5){
+        display: none;
+    }
+}
